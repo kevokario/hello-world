@@ -15,6 +15,17 @@ Look at this code
   <body>
     <h2>Welcome to Quest.com</h2>
     <p>The best websitedesigners of our generation</p>
+ #this form element demo
+    <form>
+      <label>
+        Email
+      </label>
+      <input type="text" placeholder="Provide email"/>
+      <label>
+        Description text
+      </label>
+      <textarea rows="5" placeholder="Provide some coment"></textarea>
+      <button>Send</button>
   </body>
   </html>
   
