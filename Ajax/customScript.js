@@ -62,7 +62,7 @@
 
   function loadAddUsers(){
     var div = document.getElementById('Management_Area');
-    var url = './widgets/login.html';
+    var url = './widgets/users.html';
     var ajax = getAjax();
 
     ajax.onreadystatechange = function(){
@@ -81,7 +81,7 @@
 
   function loadUsers(){
     var div = document.getElementById('Management_Area');
-    var url = './widgets/users.html';
+    var url = './widgets/logintabel.html';
     var ajax = getAjax();
 
     ajax.onreadystatechange = function(){
