@@ -1,31 +1,4 @@
-# hello-world
-Hello gihub, I am an intern at Quest website developers & Designers and today i am going to earn about you.
-So far i have learned what a repository(a project on gihub) is and how to create a repository. 
-I have also learned about branches(Different versions of your project files) and how to make them. 
-This is a branch readme-edits.  
-We will have alot of fun together github
-Look at this code
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>
-      QuestDemo
-    </title>
-  </head>
-  <body>
-    <h2>Welcome to Quest.com</h2>
-    <p>The best websitedesigners of our generation</p>
- #this form element demo
-    <form>
-      <label>
-        Email
-      </label>
-      <input type="text" placeholder="Provide email"/>
-      <label>
-        Description text
-      </label>
-      <textarea rows="5" placeholder="Provide some coment"></textarea>
-      <button>Send</button>
-  </body>
-  </html>
-  
+Hello Guys. This is a simple project that will Demonstrate the use of ajax.
+We will need bootstrap 4.3.1 framework, font-awesome icon pack, database server like wamp,xamp.
+The framworks you will find here. But for wamp or xammp am afraid you will have to download.
+ 
