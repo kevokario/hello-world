@@ -81,7 +81,7 @@
 
   function loadUsers(){
     var div = document.getElementById('Management_Area');
-    var url = './widgets/logintabel.html';
+    var url = './widgets/logintable.html';
     var ajax = getAjax();
 
     ajax.onreadystatechange = function(){
