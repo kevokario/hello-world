@@ -99,9 +99,47 @@
 
   function addUser(){
     var form = document.getElementById('addUserForm');
-    var name= '';
-    var email = '';
-    var form = '';
+
+    var name= document.getElementById('uname');
+    var email =  document.getElementById('pwd');
+
+    // var phone =  $(form).children('input:eq(2)');
+    //
+    var namest = validate(name);
+     var emailst = validate(email);
+    // var phonest = validate(phone);
+    //
+    // if(namest === true && emailst === true && phonest === true){
+    //   var json = JSON.stringify([name.value,email.value,phone.value]);
+    //   addUserDb(json);
+    // }
+
   }
 
-  
+  function validate(input){
+    var result = false;
+    var data = $(input).val();
+
+    if(data.length === 0){
+      $(input).removeClass('is-valid').addClass('is-invalid');
+    } else {
+      $(input).removeClass('is-invalid').addClass('is-valid');
+      result = true;
+    }
+    return result;
+  }
+
+  function addUserDb(json){
+    var ajax = getAjax();
+    var url = "";
+    ajax.onreadystatechange = function(){
+      if(ajax.readyState === 4){
+        alert(ajax.responseText);
+      }
+      else{
+
+      }
+    };
+    ajax.open('GET',url,true);
+    ajax.send();
+  }
