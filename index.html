@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo@Kario</title>
+    <!-- Import the bootstrap css file -->
+    <link rel="stylesheet" href="Res/bs4/css/bootstrap.min.css">
+
+    <!-- import the font-awesome css file -->
+    <link rel="stylesheet" href="Res/fa/css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+    <!-- the top section -->
+    <div class="jumbotron jumbotron-fluid bg-primary text-white">
+      <h2 class="text-center">Simple Project! <i class="fa fa-user-plus"></i></h2>
+    </div>
+
+    <!-- Body Section -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Menu Section -->
+        <div class="col-sm-2">
+          <h3 class="text-center">Menu Options</h3>
+          <div class="d-flex p-1 bg-light flex-column">
+
+              <button type="button"  class="btn btn-outline-primary mb-1">
+                <i class="fa fa-user-plus"></i> Add Users
+              </button>
+
+            <button type="button"class="btn btn-outline-primary mb-1">
+               <i class="fa fa-users"></i> View Users
+            </button>
+
+            <button type="button"class="btn btn-outline-primary mb-1">
+               <i class="fa fa-home"></i> Home
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Area Section -->
+        <div class="col-sm-10" id="Management_Area">
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <!-- import jquery -->
+  <script src="Res/bs4/js/jquery-3.4.1.js" charset="utf-8"></script>
+  <!-- import bootstrap javacript -->
+  <script src="Res/bs4/js/bootstrap.min.js" charset="utf-8"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      // on first load , load the default.html found in the widgets folder
+      loadDefault();
+    });
+
+
+    function loadDefault(){
+      let div = $('#Management_Area');
+
+      //show loading sign
+      $(div).html('<p class="text-center text-success"><i class="spinner-border "></i></p>');
+
+      // Use get to load the Page
+      $.get('widgets/default.html',function(data,status){
+        $(div).html(data);
+      });
+
+    }
+  </script>
+</html>
