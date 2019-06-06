@@ -21,7 +21,7 @@
     <div class="container-fluid">
       <div class="row">
         <!-- Menu Section -->
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <h3 class="text-center">Menu Options</h3>
           <div class="d-flex p-1 bg-light flex-column">
 
@@ -40,7 +40,7 @@
         </div>
 
         <!-- Main Area Section -->
-        <div class="col-sm-10" id="Management_Area">
+        <div class="col-sm-9" id="Management_Area">
 
         </div>
       </div>
@@ -58,12 +58,26 @@
     $(document).ready(function(){
       // on first load , load the default.html found in the widgets folder
       loadDefault();
+
+      //adding event Listeners to button menus!
+      //button Add Users
+      $('.col-sm-2 button:eq(0)').click(function(){
+        loadAddUsers();
+      });
+      //button View users
+      $('.col-sm-2 button:eq(1)').click(function(){
+          alert($(this).text());
+      });
+      //button Home
+      $('.col-sm-2 button:eq(2)').click(function(){
+        loadDefault();
+      });
+
     });
 
 
     function loadDefault(){
       let div = $('#Management_Area');
-
       //show loading sign
       $(div).html('<p class="text-center text-success"><i class="spinner-border "></i></p>');
 
@@ -71,7 +85,17 @@
       $.get('widgets/default.html',function(data,status){
         $(div).html(data);
       });
+    }
 
+    function loadAddUsers(){
+      let div = $('#Management_Area');
+      //show loading sign
+      $(div).html('<p class="text-center text-success"><i class="spinner-border "></i></p>');
+
+      // Use get to load the Page
+      $.get('widgets/login.html',function(data,status){
+        $(div).html(data);
+      });
     }
   </script>
 </html>
