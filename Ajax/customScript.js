@@ -100,14 +100,15 @@
   function addUser(){
     var form = document.getElementById('addUserForm');
 
-    var name= document.getElementById('uname');
-    var email =  document.getElementById('pwd');
+    var name= document.getElementById('names');
+    var email =  document.getElementById('uemail');
+    var phone = document.getElementById('pwd');
 
     // var phone =  $(form).children('input:eq(2)');
     //
     var namest = validate(name);
      var emailst = validate(email);
-    // var phonest = validate(phone);
+    var phonest = validate(phone);
     //
     // if(namest === true && emailst === true && phonest === true){
     //   var json = JSON.stringify([name.value,email.value,phone.value]);
