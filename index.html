@@ -131,6 +131,19 @@
       // $.get('widgets/login.html',function(data,status){
       //   $(div).html(data);
       // });
+      var div = document.getElementById('Management_Area');
+      var url = './widgets/login.html';
+      var ajax = getAjax();
+
+      ajax.onreadystatechange = function(){
+        if(ajax.readyState === 4){
+          div.innerHTML = ajax.responseText;
+        } else {
+          div.innerHTML = '<p class="text-center text-success"><i class="spinner-border "></i></p>';
+        }
+      };
+      ajax.open('GET',url,true);
+      ajax.send();
     }
   </script>
 </html>
