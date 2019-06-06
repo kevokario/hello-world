@@ -25,15 +25,15 @@
           <h3 class="text-center">Menu Options</h3>
           <div class="d-flex p-1 bg-light flex-column">
 
-              <button type="button"  class="btn btn-outline-primary mb-1">
+              <button type="button" id="addUsers"  class="btn btn-outline-primary mb-1">
                 <i class="fa fa-user-plus"></i> Add Users
               </button>
 
-            <button type="button"class="btn btn-outline-primary mb-1">
+            <button type="button" id="viewUsers" class="btn btn-outline-primary mb-1">
                <i class="fa fa-users"></i> View Users
             </button>
 
-            <button type="button"class="btn btn-outline-primary mb-1">
+            <button type="button" id="home" class="btn btn-outline-primary mb-1">
                <i class="fa fa-home"></i> Home
             </button>
           </div>
@@ -61,16 +61,18 @@
 
       //adding event Listeners to button menus!
       //button Add Users
-      $('.col-sm-2 button:eq(0)').click(function(){
+      $('#addUsers').click(function(){
+        // alert('');
         loadAddUsers();
       });
       //button View users
-      $('.col-sm-2 button:eq(1)').click(function(){
+      $('#viewUsers').click(function(){
           alert($(this).text());
       });
       //button Home
-      $('.col-sm-2 button:eq(2)').click(function(){
+      $('#home').click(function(){
         loadDefault();
+        // alert('');
       });
 
     });
